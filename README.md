@@ -2,7 +2,7 @@
 
 PyTorch implementation of [Natural TTS Synthesis By Conditioning
 Wavenet On Mel Spectrogram Predictions](https://arxiv.org/pdf/1712.05884.pdf). 
-
+1
 This implementation includes **distributed** and **automatic mixed precision** support
 and uses the [LJSpeech dataset](https://keithito.com/LJ-Speech-Dataset/).
 
