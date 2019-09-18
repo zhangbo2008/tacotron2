@@ -1,3 +1,16 @@
+报错原因
+缺少libsndfile，查看 SoundFile官网，发现需要安装libsndfile
+
+ On Linux, you need to install libsndfile using your distribution’s package manager, for example sudo apt-get install libsndfile1.
+
+解决办法
+sudo apt-get install libsndfile1
+
+
+
+
+
+
 
 
 
