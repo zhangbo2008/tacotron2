@@ -8,6 +8,13 @@ sudo apt-get install libsndfile1
 
 
 
+'''
+下面记录test.py的运行
+'''
+
+1.mkvirtualenv -p python3.6 zb2
+2.https://download.pytorch.org/whl/cu100/torch-1.0.0-cp36-cp36m-win_amd64.whl
+
 
 
 

@@ -29,7 +29,7 @@ from layers import TacotronSTFT, STFT
 from audio_processing import griffin_lim
 from train import load_model
 from text import text_to_sequence
-from denoiser import Denoiser
+from waveglow.denoiser  import Denoiser
 
 #%%
 
@@ -50,9 +50,7 @@ hparams.sampling_rate = 22050
 
 #%% md
 
-#### Load model from checkpoint
 
-#%%
 
 checkpoint_path = "tacotron2_statedict.pt"
 model = load_model(hparams)
@@ -67,6 +65,13 @@ _ = model.cuda().eval().half()
 
 waveglow_path = 'waveglow_256channels.pt'
 waveglow = torch.load(waveglow_path)['model']
+
+
+
+
+
+
+##
 waveglow.cuda().eval().half()
 for k in waveglow.convinv:
     k.float()
@@ -77,7 +82,15 @@ denoiser = Denoiser(waveglow)
 #### Prepare text input
 
 #%%
+'''
 
+
+
+
+
+
+
+'''
 text = "Waveglow is really awesome!"
 sequence = np.array(text_to_sequence(text, ['english_cleaners']))[None, :]
 sequence = torch.autograd.Variable(
