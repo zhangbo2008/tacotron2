@@ -16,7 +16,7 @@ valid_symbols = [
 _valid_symbol_set = set(valid_symbols)
 
 
-class CMUDict:
+class CMUDict: #卡内基梅陇大学的字典
   '''Thin wrapper around CMUDict data. http://www.speech.cs.cmu.edu/cgi-bin/cmudict'''
   def __init__(self, file_or_path, keep_ambiguous=True):
     if isinstance(file_or_path, str):

@@ -6,6 +6,7 @@ import librosa.util as librosa_util
 
 def window_sumsquare(window, n_frames, hop_length=200, win_length=800,
                      n_fft=800, dtype=np.float32, norm=None):
+    # 一针总共800长度,n:总共解析多少个针
     """
     # from librosa 0.6
     Compute the sum-square envelope of a window function at a given hop length.
@@ -45,9 +46,10 @@ def window_sumsquare(window, n_frames, hop_length=200, win_length=800,
     x = np.zeros(n, dtype=dtype)
 
     # Compute the squared window at the desired length
-    win_sq = get_window(window, win_length, fftbins=True)
-    win_sq = librosa_util.normalize(win_sq, norm=norm)**2
-    win_sq = librosa_util.pad_center(win_sq, n_fft)
+    win_sq = get_window(window, win_length, fftbins=True) #采样函数
+    win_sq = librosa_util.normalize(win_sq, norm=norm)**2 #平方
+    win_sq = librosa_util.pad_center(win_sq, n_fft) #填充0. 结果长度是n_fft,如果win_length指定了,
+    #那么这行代码彩旗效果.
 
     # Fill the envelope
     for i in range(n_frames):

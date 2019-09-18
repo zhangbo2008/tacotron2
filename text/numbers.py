@@ -1,6 +1,6 @@
 """ from https://github.com/keithito/tacotron """
 
-import inflect
+import inflect #单词变形函数
 import re
 
 

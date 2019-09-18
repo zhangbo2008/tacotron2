@@ -1,7 +1,37 @@
+
+
+
+
+https://blog.csdn.net/qq_28006327/article/details/59129110
+
+学习声音方面的只是.
+
+https://blog.csdn.net/zongza/article/details/88973176
+
+服务网无无
+我是
+
+
+
+
+
+
 # Tacotron 2 (without wavenet)
 
 PyTorch implementation of [Natural TTS Synthesis By Conditioning
 Wavenet On Mel Spectrogram Predictions](https://arxiv.org/pdf/1712.05884.pdf). 
+
+
+先看这个论文
+
+
+
+
+
+
+
+
+
 1
 This implementation includes **distributed** and **automatic mixed precision** support
 and uses the [LJSpeech dataset](https://keithito.com/LJ-Speech-Dataset/).
